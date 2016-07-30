@@ -7,3 +7,7 @@ Compile and run:
 g++ main.cpp -o main
 ./main
 ```
+
+## TODO
+
+The project has many to-do's. Check 'em [here](/TODO.md)
