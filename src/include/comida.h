@@ -2,7 +2,7 @@
 #define COMIDA_H
 #include <iostream>
 #include <stdlib.h>
-#include "constantes.h"
+#include "../constantes.h"
 #include <vector>
 
 

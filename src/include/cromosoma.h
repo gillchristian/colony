@@ -4,7 +4,7 @@
 #include "uc.h"
 #include <stdlib.h>
 #include <vector>
-#include "constantes.h"
+#include "../constantes.h"
 using namespace std;
 
 class cromosoma{

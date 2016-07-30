@@ -6,7 +6,7 @@
 #include <fstream>
 #include <map>
 #include "sembrador.h"
-#include "constantes.h"
+#include "../constantes.h"
 #include "uc.h"
 #include "comida.h"
 

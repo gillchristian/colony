@@ -3,7 +3,7 @@
 #include <vector>
 #include <stdlib.h>
 #include <iostream>
-#include "constantes.h"
+#include "../constantes.h"
 #include "cromosoma.h"
 #include "comida.h"
 using namespace std;
