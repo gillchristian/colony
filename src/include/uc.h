@@ -57,8 +57,8 @@ exit(0);
 do {
 direccion=rand()%8;
 if(lugarcomida<8) {
-	direccion=mi_cromosoma.posicion(lugarcomida);
-	lugarcomida=10;}
+  direccion=mi_cromosoma.posicion(lugarcomida);
+  lugarcomida=10;}
 switch(direccion) {
 case 0:
 nuevox=posx-1;nuevoy=posy;
@@ -110,37 +110,37 @@ return mi_cromosoma;
 
 int uc::buscarcomida() {
 int dirigido=10;
-	if(dentrolimites(posx-1,posy))
-		if (COMIDA.cant_comida(posx-1,posy)>0)
-			dirigido=0;
+  if(dentrolimites(posx-1,posy))
+    if (COMIDA.cant_comida(posx-1,posy)>0)
+      dirigido=0;
 
-	if(dentrolimites(posx-1,posy+1))
-		if (COMIDA.cant_comida(posx-1,posy+1)>0)
-			dirigido=1;
+  if(dentrolimites(posx-1,posy+1))
+    if (COMIDA.cant_comida(posx-1,posy+1)>0)
+      dirigido=1;
 
-	if(dentrolimites(posx,posy+1))
-		if (COMIDA.cant_comida(posx,posy+1)>0)
-			dirigido=2;
+  if(dentrolimites(posx,posy+1))
+    if (COMIDA.cant_comida(posx,posy+1)>0)
+      dirigido=2;
 
-	if(dentrolimites(posx+1,posy+1))
-		if (COMIDA.cant_comida(posx+1,posy+1)>0)
-			dirigido=3;
+  if(dentrolimites(posx+1,posy+1))
+    if (COMIDA.cant_comida(posx+1,posy+1)>0)
+      dirigido=3;
 
-	if(dentrolimites(posx+1,posy))
-		if (COMIDA.cant_comida(posx+1,posy)>0)
-			dirigido=4;
+  if(dentrolimites(posx+1,posy))
+    if (COMIDA.cant_comida(posx+1,posy)>0)
+      dirigido=4;
 
-	if(dentrolimites(posx+1,posy-1))
-		if (COMIDA.cant_comida(posx+1,posy-1)>0)
-			dirigido=5;
+  if(dentrolimites(posx+1,posy-1))
+    if (COMIDA.cant_comida(posx+1,posy-1)>0)
+      dirigido=5;
 
-	if(dentrolimites(posx,posy-1))
-		if (COMIDA.cant_comida(posx,posy-1)>0)
-			dirigido=6;
+  if(dentrolimites(posx,posy-1))
+    if (COMIDA.cant_comida(posx,posy-1)>0)
+      dirigido=6;
 
-	if(dentrolimites(posx-1,posy-1))
-		if (COMIDA.cant_comida(posx-1,posy-1)>0)
-			dirigido=7;
+  if(dentrolimites(posx-1,posy-1))
+    if (COMIDA.cant_comida(posx-1,posy-1)>0)
+      dirigido=7;
 
 return dirigido;//se devuelve 10 cuando no hay comida alrededor
 }
@@ -149,18 +149,18 @@ int uc::comer() {
 int acomer=energia_max-energia,comido=0;
 int comida_enlugar=COMIDA.cant_comida(posx,posy);
 if(acomer<=cant_comer) {
-	if (comida_enlugar>acomer)
-		comido=acomer;
-	else 
-		if (comida_enlugar>0)
-			comido=comida_enlugar;
-		}
+  if (comida_enlugar>acomer)
+    comido=acomer;
+  else 
+    if (comida_enlugar>0)
+      comido=comida_enlugar;
+    }
 else {
-	if (comida_enlugar>cant_comer)
-	comido=cant_comer;
-	else 
-		if (comida_enlugar>0)
-			comido=comida_enlugar;
+  if (comida_enlugar>cant_comer)
+  comido=cant_comer;
+  else 
+    if (comida_enlugar>0)
+      comido=comida_enlugar;
 }
 energia+=comido;
 return comido;

@@ -26,7 +26,7 @@ void estacion();
 
 
 comida::comida() { //costructor
-	vector<vector<int> > aux(x_dim_max, vector<int>(y_dim_max,0));
+  vector<vector<int> > aux(x_dim_max, vector<int>(y_dim_max,0));
 mapa_comida=aux;
 }
 
@@ -49,25 +49,25 @@ return mapa_comida[x][y];
 }
 
 bool comida::dentrolimites(int nuevox, int nuevoy) {
-	if((nuevox>-1)&&(nuevox<x_dim_max))
-		if((nuevoy>-1)&&(nuevoy<y_dim_max))
-			return true;
+  if((nuevox>-1)&&(nuevox<x_dim_max))
+    if((nuevoy>-1)&&(nuevoy<y_dim_max))
+      return true;
 return false;
 }
 
 int comida::total() {
 int sumatoria=0;
 for(int i=0;i<x_dim_max;i++)
-	for(int j=0;j<y_dim_max;j++)
-		sumatoria+=mapa_comida[i][j];
+  for(int j=0;j<y_dim_max;j++)
+    sumatoria+=mapa_comida[i][j];
 return sumatoria;}
 
 void comida::estacion() {
 for (int i=0;i<x_dim_max;i++)
-	for(int j=0;j<y_dim_max;j++) {
-		mapa_comida[i][j]-=degradar_invierno;
-		if (mapa_comida[i][j]<0)
-			mapa_comida[i][j]=0;}
+  for(int j=0;j<y_dim_max;j++) {
+    mapa_comida[i][j]-=degradar_invierno;
+    if (mapa_comida[i][j]<0)
+      mapa_comida[i][j]=0;}
 }
 
 #endif
