@@ -2,8 +2,8 @@
 #define CONSTANTES_H
 
 // --- dimensiones ---
-extern const int x_dim_max = 200;
-const int y_dim_max = 200;
+extern const int x_dim_max = 100;
+const int y_dim_max = 100;
 
 // --- uc ------------
 const int cant_a_reproducir = 10;

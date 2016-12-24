@@ -12,13 +12,18 @@ int main () {
 
   for(int i = 0; i < 1000; i++) {
     hormigas.movimiento();
+    if (i % 10 == 0) {
+      hormigas.escribir_datos(archi);
+    }
   }
 
   for(int i = 0; i < x_dim_max; i++) {
-    for(int j = 0; j < y_dim_max; j++)
-      cout << setw(3) << COMIDA.mapa_comida[i][j] << ' ';
-      cout << endl;
+    for(int j = 0; j < y_dim_max; j++) {
+      cout << setw(2) << COMIDA.mapa_comida[i][j] << ' ';
     }
+    cout << endl;
+  }
+
   cout << "total de comida: " << COMIDA.total() << endl;
   hormigas.escribir_datos(archi);
   archi.close();

@@ -85,8 +85,9 @@ void colonia::movimiento() {
   }
   promedio_int /= cont;
 
-  if ((tiempo % invierno) == 0)
-   COMIDA.estacion();
+  if ((tiempo % invierno) == 0) {
+    COMIDA.estacion();
+  }
 }
 
 /**
@@ -142,7 +143,7 @@ void colonia::escribir_datos(ofstream& archi) {
 }
 
 void colonia::edades (int edad, uc& UC) {
- edad_ucs[edad] = UC.vercromosoma();
+  edad_ucs[edad] = UC.vercromosoma();
 }
 
 #endif
