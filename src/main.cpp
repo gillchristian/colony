@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <fstream>
 #include "include/colonia.h"
+#include "constantes.h"
 
 using namespace std;
 
@@ -10,7 +11,7 @@ int main () {
   colonia hormigas;
   ofstream archi ("datos.txt");
 
-  for(int i = 0; i < 1000; i++) {
+  for(int i = 0; i < iterations; i++) {
     hormigas.movimiento();
     if (i % 10 == 0) {
       hormigas.escribir_datos(archi);

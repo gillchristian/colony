@@ -1,16 +1,19 @@
 #ifndef CONSTANTES_H
 #define CONSTANTES_H
 
+// --- ticks ---------
+const int iterations = 1 * 1000;
+
 // --- dimensiones ---
-extern const int x_dim_max = 100;
-const int y_dim_max = 100;
+extern const int x_dim_max = 50;
+const int y_dim_max = 50;
 
 // --- uc ------------
-const int cant_a_reproducir = 10;
+const int cant_a_reproducir = 5;
 const int energia_inicial = 50;
 const int energia_max = 150;
-const int cant_ucs = 100;
-const int cant_comer = 15;
+const int cant_ucs = 50;
+const int cant_comer = 10;
 
 // --- sembradores ---
 const int comida_sembrada = 10;

@@ -18,7 +18,7 @@ class colonia{
     colonia ();
     void movimiento();
     void edades (int edad, uc& UC);
-    void escribir_datos(ofstream& archi);
+    void escribir_datos(ofstream&);
     uc reproduccion();
 
   private:
@@ -95,13 +95,11 @@ void colonia::movimiento() {
  */
 uc colonia::reproduccion() {
 
-  vector <uc> reproduccion_A;
-  vector <uc> reproduccion_B;
-  uc hijo;
-  uc madre;
-  uc padre;
-  int mayorA = 0;
-  int mayorB = 0;
+  vector <uc> reproduccion_A, reproduccion_B;
+
+  uc hijo, madre, padre;
+
+  int mayorA = 0, mayorB = 0;
 
   for(int i = 0; i < cant_ucs; i++) {
     if(UC[i].verenergia() != 0) {
@@ -135,8 +133,8 @@ uc colonia::reproduccion() {
   return hijo;
 }
 
-void colonia::escribir_datos(ofstream& archi) {
-  archi << "Tiempo: " << tiempo << ", " <<
+void colonia::escribir_datos(ofstream& file) {
+  file << "Tiempo: " << tiempo << ", " <<
     "Cantidad de comida en el mapa: " << COMIDA.total() << ", " <<
     "UC que murieron: " << muertos << ", " <<
     "Promedio de inteligencia: " << promedio_int << endl;
